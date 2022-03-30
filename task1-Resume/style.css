@@ -15,10 +15,11 @@
 
 
 .left-side {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
     justify-content: center;
+    align-content: center;
+    justify-items: center;
     width: 33%;
     padding: 30px 0 30px 0;
     background-color: rgb(243, 241, 241);
@@ -27,8 +28,6 @@
 }
 
 .right-side {
-    display: flex;
-    flex-direction: column;
     padding: 60px 20px 60px 20px;
     width: 67%;
     border-top-right-radius: 20px;
@@ -75,6 +74,7 @@
 }
 
 .adress, .email, .tel {
+    text-align: center;
     margin: 2px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 15px;
@@ -93,3 +93,27 @@ a {
     color: rgb(189, 189, 189);
 }
 
+@media all and (max-width: 620px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-side {
+        width: 100% ;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .right-side {
+        width: 100% ;
+        padding: 10px 20px 20px 20px;
+    }
+
+    .title-section {
+        text-align: center;
+    }
+
+    .name {
+        text-align: center;
+    }
+}
