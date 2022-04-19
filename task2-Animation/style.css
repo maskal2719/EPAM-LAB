@@ -1,0 +1,139 @@
+.container {
+    width: 700px;
+    margin: 0 auto;
+}
+
+@keyframes anim-task2 {
+    from {margin-left: 0px;}
+    to {margin-left: 200px;}
+}
+
+@keyframes anim-task3 {
+    from {background: white;}
+    to {background: red;}
+}
+
+@keyframes anim-task4 {
+    0% {margin-left: 0px;margin-top: 0px;}
+    25% {margin-left: 200px;margin-top: 0px;}
+    50% {margin-left: 200px;margin-top: 200px;}
+    75% {margin-left: 0px;margin-top: 200px;}
+    100% {margin-left: 0px;margin-top: 0px;}
+}
+
+@keyframes anim-task6 {
+    0% {margin-left: 0px;}
+    50% {margin-left: 200px;}
+    100% {margin-left: 0px;}
+}
+
+@keyframes anim-task9 {
+    0% { width: 0%;}
+    100% { width: 100%;}
+}
+
+@keyframes anim-task11 {
+   from {width: 0px;}
+   to {width: 300px;}
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dotted black;
+    height: 300px;
+}
+
+.wrap9 {
+    display: flex;
+    align-items: center;
+    border: 1px dotted black;
+    height: 300px;
+}
+
+.wrap9-el {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.wrap11 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 1px dotted black;
+    height: 300px;
+}
+
+h3 {
+    text-align: center;
+}
+
+#task2 {
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    animation: anim-task2 2s ease infinite;
+    margin-bottom: 30px;
+}
+
+#task3 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    animation: anim-task3 5s ease infinite;
+    margin-bottom: 30px;
+}
+
+#task4 {
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    animation: anim-task4 5s ease infinite;
+    margin-bottom: 30px;
+}
+
+#task6 {
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    animation: anim-task6 2s ease infinite;
+}
+
+#task9 {
+    align-items: flex-start;
+    width: 0%;
+    height: 50px;
+    border: 1px solid red;
+    background: red;
+    animation: anim-task9 16s linear infinite;
+}
+
+#click {
+    width: 100px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#task11 {
+    height: 40px;
+    border: 1px solid blue;
+    animation: anim-task11 4s ease infinite alternate;
+    animation-play-state: paused;
+}
+
+#click:hover + #task11 {
+    animation-play-state: running;
+}
+
+
+
+
+
+
+
+
