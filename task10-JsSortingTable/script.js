@@ -1,15 +1,12 @@
-
 let table = document.createElement('table');
 let thead = document.createElement('thead');
 let tbody = document.createElement('tbody');
 
 table.setAttribute('id','table')
 
-
 table.append(thead);
 table.append(tbody);
 document.getElementById('body').append(table);
-
 
 let row1 = document.createElement('tr');
 let head2 = document.createElement('th');
@@ -30,7 +27,6 @@ row2Date3.innerHTML = 'Borussia Dortmund';
 row2.append(row2Date2);
 row2.append(row2Date3);
 tbody.append(row2);
-
 
 let row3 = document.createElement('tr');
 let row3Date2 = document.createElement('td');
@@ -62,11 +58,24 @@ row5.append(row5Date2);
 row5.append(row5Date3);
 tbody.append(row5);
 
+let flag = true;
+
 head2.addEventListener('click', () => {
-    let sortedRows = Array.from(table.rows)
+    if(flag){
+        let sortedRows = Array.from(table.rows)
         .slice(1)
         .sort((rowA, rowB) => rowA.cells[0].innerHTML > rowB.cells[0].innerHTML ? 1 : -1);
         table.tBodies[0].append(...sortedRows);
+        flag = false
+        console.log(flag)
+    }else{
+        let sortedRows = Array.from(table.rows)
+        .slice(1)
+        .sort().reverse();
+        table.tBodies[0].append(...sortedRows);
+        flag = true
+        console.log(flag)
+    }
 });
 
 let editingTd;
